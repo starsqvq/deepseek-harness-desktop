@@ -1,0 +1,35 @@
+{
+  "appId": "ai.deepseek.harness.desktop",
+  "productName": "DeepSeek Harness",
+  "directories": {
+    "app": "desktop-shell",
+    "output": "dist-fast"
+  },
+  "asar": true,
+  "npmRebuild": false,
+  "files": [
+    "main.cjs",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "runtime/node.exe",
+      "to": "runtime/node.exe"
+    },
+    {
+      "from": "runtime-app/package.json",
+      "to": "runtime-app/package.json"
+    },
+    {
+      "from": "runtime-app/node_modules",
+      "to": "runtime-app/node_modules",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ],
+  "win": {
+    "target": "dir",
+    "signAndEditExecutable": false
+  }
+}

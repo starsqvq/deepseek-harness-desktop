@@ -1,0 +1,17 @@
+deepseek-harness-app/
+release/
+*.zip
+*.7z
+*.log
+node_modules/
+runtime/
+runtime-app/
+dist/
+dist-fast/
+dist-stale-*/
+packed-dsh/
+packed-vendor/
+copy-test/
+runtime-test*/
+.runtime-smoke/
+.smoke-home/
