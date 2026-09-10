@@ -95,7 +95,9 @@ async function startBackend() {
   }
   delete environment.ELECTRON_RUN_AS_NODE
 
-  backend = spawn(node, [cli, 'web', '--host', '127.0.0.1', '--port', String(port)], {
+  // The desktop shell renders the Web UI in its own BrowserWindow, so the
+  // harness backend must not hand the URL to the OS default browser too.
+  backend = spawn(node, [cli, 'web', '--no-open', '--host', '127.0.0.1', '--port', String(port)], {
     cwd: dataDir,
     env: environment,
     windowsHide: true,

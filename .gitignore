@@ -15,3 +15,7 @@ copy-test/
 runtime-test*/
 .runtime-smoke/
 .smoke-home/
+.runtime-upgrade/
+tmp-asar/
+tmp-asar-check/
+tmp-old/

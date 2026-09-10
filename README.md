@@ -6,13 +6,21 @@ loopback port, and does not depend on an existing `127.0.0.1:3080` service.
 
 ## Download
 
-Download `deepseek-harness-desktop-v0.1.0-win-x64.zip` from the Releases page.
-Extract the ZIP as a whole, keep `deepseek-harness.exe` beside the
-`deepseek-harness-app` directory, and double-click the EXE.
+The ready-to-run Windows build is attached to the
+[v0.1.0 release](https://github.com/starsqvq/deepseek-harness-desktop/releases/tag/v0.1.0):
+download `deepseek-harness-desktop-v0.1.0-win-x64.zip`, extract the ZIP as a
+whole, keep `deepseek-harness.exe` beside the `deepseek-harness-app`
+directory, and double-click the EXE.
 
 The launcher is intentionally small and starts the unpacked Electron app
 directory directly. This avoids the long CPU-heavy extraction step of a
 single-file Electron portable executable.
+
+`v0.1.1` is a source-only release. It carries the `--no-open` desktop-shell
+fix and the recovery notes under `docs/`, together with the source archives
+GitHub generates for the tag. It does not ship a rebuilt ZIP, because the build
+inputs (`node_modules`, `packed-dsh`, `packed-vendor`, `runtime`) and the
+original DeepSeek Harness checkout are no longer present on the build machine.
 
 ## Build
 
